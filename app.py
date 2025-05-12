@@ -6,7 +6,7 @@ from src.Routes.curso_routes import curso_bp
 from src.Routes.estudiante_routes import estudiante_bp
 from src.Routes.inscripcion_routes import inscripcion_bp
 
-app = Flask(__name__, template_folder="app/templates")
+app = Flask(__name__, template_folder="src/templates")
 app.secret_key = 'codigo secreto'
 
 # Configurar Flask_login
