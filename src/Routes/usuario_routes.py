@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, url_for, redirect
 from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
-from app.Models.usuario_model import UsuarioModel
-from app.Services.usuario_service import UsuarioService
+from src.Models.usuario_model import UsuarioModel
+from src.Services.usuario_service import UsuarioService
 
 usuario_bp = Blueprint('usuario', __name__, url_prefix='/usuario')
 usuario_service = UsuarioService()

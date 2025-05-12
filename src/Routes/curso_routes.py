@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect
 
-from app.Models.curso_model import CursoModel
-from app.Services.curso_service import CursoService
+from src.Models.curso_model import CursoModel
+from src.Services.curso_service import CursoService
 
 curso_bp = Blueprint('curso',__name__,url_prefix='/curso')
 curso_service = CursoService() #Variable global

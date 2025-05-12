@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 
-from app.Models.inscripcion_model import InscripcionModel
-from app.Services.curso_service import CursoService
-from app.Services.estudiante_service import EstudianteService
-from app.Services.inscripcion_service import InscripcionService
+from src.Models.inscripcion_model import InscripcionModel
+from src.Services.curso_service import CursoService
+from src.Services.estudiante_service import EstudianteService
+from src.Services.inscripcion_service import InscripcionService
 
 inscripcion_bp = Blueprint('inscripcion', __name__, url_prefix='/inscripcion')
 

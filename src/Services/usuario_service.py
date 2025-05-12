@@ -1,6 +1,6 @@
 
-from app.Models.usuario_model import UsuarioModel
-from app.Services.cursor_pool import CursorPool
+from src.Models.usuario_model import UsuarioModel
+from src.Services.cursor_pool import CursorPool
 
 
 class UsuarioService():

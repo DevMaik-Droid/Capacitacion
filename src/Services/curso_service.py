@@ -1,5 +1,5 @@
-from app.Models.curso_model import CursoModel
-from app.Services.cursor_pool import CursorPool
+from src.Models.curso_model import CursoModel
+from src.Services.cursor_pool import CursorPool
 
 class CursoService:
 

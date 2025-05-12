@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect
 
-from app.Models.estudiante_model import EstudianteModel
-from app.Services.estudiante_service import EstudianteService
+from src.Models.estudiante_model import EstudianteModel
+from src.Services.estudiante_service import EstudianteService
 
 
 estudiante_bp = Blueprint('estudiante', __name__, url_prefix='/estudiante')

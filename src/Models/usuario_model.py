@@ -1,6 +1,6 @@
 from flask_login import UserMixin
 
-from app.Services.cursor_pool import CursorPool
+from src.Services.cursor_pool import CursorPool
 
 class UsuarioModel(UserMixin):
     def __init__(self, id=None,nombre=None, apellido=None, email=None, usuario=None, contrasenia=None):
