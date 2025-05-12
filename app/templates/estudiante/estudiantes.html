@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+{% block title %} Estudiantes {% endblock %}
+
+
+{% block content %}
+<a href="/estudiante/crear" class="btn btn-outline-primary">Crear Estudiante</a>
+<table class="table table-hover">
+  <thead>
+    <th>ID</th>
+    <th>NOMBRE</th>
+    <th>APELLIDO</th>
+    <th>FECHA DE NACIMIENTO</th>
+    <th>ACCIONES</th>
+  </thead>
+  <tbody>
+    {% for estudiante in estudiantes %}
+    <tr>
+      <td>{{estudiante['id']}}</td>
+      <td>{{estudiante['nombre']}}</td>
+      <td>{{estudiante['apellido']}}</td>
+      <td>{{estudiante['fecha_nacimiento']}}</td>
+      <td>
+        <a href="/estudiante/editar/{{estudiante['id']}}" class="btn btn-outline-warning">Editar</a>
+        <a href="/estudiante/eliminar/{{estudiante['id']}}" class="btn btn-outline-danger" onclick="return confirm('Esta Seguro de eliminar')">Eliminar</a>
+      </td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

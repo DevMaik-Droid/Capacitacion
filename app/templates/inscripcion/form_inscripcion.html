@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<form action="" method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Fecha</label>
+      <input type="date" class="form-control" id="exampleInputEmail1" name="txt_fecha" value="{{inscripcion.fecha if inscripcion else ''}}" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Estudiante</label>
+        <select name="txt_estudiante_id" class="form-select" aria-label="Default select example" required>
+            <option value="" selected>Seleccione una opcion</option>
+            {% for estudiante in estudiantes %}
+            <option value="{{estudiante['id']}}" {% if inscripcion and inscripcion.estudiante_id == estudiante['id'] %}selected{% endif %}>{{estudiante['nombre']}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Curso</label>
+        <select name="txt_curso_id" class="form-select" aria-label="Default select example" required>
+            <option value="" selected>Seleccione una opcion</option>
+            {% for curso in cursos %}
+            <option value="{{curso['id']}}" {% if inscripcion and inscripcion.curso_id == curso['id'] %}selected{% endif %}>{{curso['descripcion']}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<form action="" method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Descripccion</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="txt_descripcion" value="{{curso['descripcion'] if curso else ''}}">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Horas</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" name="txt_horas" value="{{curso['horas'] if curso else ''}}">
+      </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+{% endblock %}

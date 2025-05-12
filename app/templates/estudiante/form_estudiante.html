@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<form action="" method="post">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="txt_nombre" value="{{estudiante['nombre'] if estudiante else ''}}">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="txt_apellido" value="{{estudiante['apellido'] if estudiante else ''}}">
+      </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Fecha de nacimiento</label>
+        <input type="date" class="form-control" id="exampleInputEmail1" name="txt_fecha_nacimiento" value="{{estudiante['fecha_nacimiento'] if estudiante else ''}}">
+      </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+{% endblock %}
