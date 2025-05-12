@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 from flask_login import LoginManager, login_required
-from app.Models.usuario_model import UsuarioModel
-from app.Routes.usuario_routes import usuario_bp
-from app.Routes.curso_routes import curso_bp
-from app.Routes.estudiante_routes import estudiante_bp
-from app.Routes.inscripcion_routes import inscripcion_bp
+from src.Models.usuario_model import UsuarioModel
+from src.Routes.usuario_routes import usuario_bp
+from src.Routes.curso_routes import curso_bp
+from src.Routes.estudiante_routes import estudiante_bp
+from src.Routes.inscripcion_routes import inscripcion_bp
 
 app = Flask(__name__, template_folder="app/templates")
 app.secret_key = 'codigo secreto'

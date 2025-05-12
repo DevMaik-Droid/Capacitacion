@@ -1,6 +1,6 @@
-from app.Services.cursor_pool import CursorPool
+from src.Services.cursor_pool import CursorPool
 
-from app.Models.inscripcion_model import InscripcionModel
+from src.Models.inscripcion_model import InscripcionModel
 
 class InscripcionService:
     _TABLE_NAME = 'inscripciones'

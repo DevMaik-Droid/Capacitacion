@@ -1,5 +1,5 @@
-from app.Models.estudiante_model import EstudianteModel
-from app.Services.cursor_pool import CursorPool
+from src.Models.estudiante_model import EstudianteModel
+from src.Services.cursor_pool import CursorPool
 
 
 class EstudianteService:
